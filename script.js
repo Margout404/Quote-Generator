@@ -21,6 +21,8 @@ function complete(){
 function newQuote(){
     //start the loading spinner
     loading()
+    //set timeout for the loading
+    setTimeout(()=>{
     // pick a random quote from apiquotes array
     const quote = apiQuotes[Math.floor(Math.random()* apiQuotes.length)]
     //check if author is available
@@ -38,10 +40,7 @@ function newQuote(){
     quoteText.textContent = quote.text;
     complete()
     //complete the loading symbol
-
-
-
-
+    },500)
 }
 
 //api quotes
